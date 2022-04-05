@@ -1,10 +1,14 @@
-# This file contains terraform version constrains, provider definition, and also main resources.
-# https://www.terraform.io/docs/configuration/resources.html
+module "simple" {
+  source = "../.."
 
-terraform {
-  required_version = ">= 0.11.14, < 0.12.0"
-}
+  log_group_name = "/tvlk/app-java/tstlog"
+  environment    = "testing"
+  product_domain = "tst"
 
-provider "aws" {
-  version = ">= 2.0.0, < 3.0.0"
+  retention_in_days = "150"
+
+  additional_tags = {
+    Application = "java"
+    Service     = "tstlog"
+  }
 }

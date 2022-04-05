@@ -1,16 +1,12 @@
 # Terraform AWS Modules Template
 
-[![Terraform Version](https://img.shields.io/badge/Terraform%20Version-0.11.13-blue.svg)](https://releases.hashicorp.com/terraform/)
-[![Release](https://img.shields.io/github/release/traveloka/terraform-aws-modules-template.svg)](https://github.com/traveloka/terraform-aws-modules-template/releases)
-[![Last Commit](https://img.shields.io/github/last-commit/traveloka/terraform-aws-modules-template.svg)](https://github.com/traveloka/terraform-aws-modules-template/commits/master)
-[![Issues](https://img.shields.io/github/issues/traveloka/terraform-aws-modules-template.svg)](https://github.com/traveloka/terraform-aws-modules-template/issues)
-[![Pull Requests](https://img.shields.io/github/issues-pr/traveloka/terraform-aws-modules-template.svg)](https://github.com/traveloka/terraform-aws-modules-template/pulls)
-[![License](https://img.shields.io/github/license/traveloka/terraform-aws-modules-template.svg)](https://github.com/traveloka/terraform-aws-modules-template/blob/master/LICENSE)
+[![Terraform Version](https://img.shields.io/badge/Terraform%20Version-0.13.0-blue.svg)](https://releases.hashicorp.com/terraform/)
+[![Release](https://img.shields.io/github/release/traveloka/terraform-aws-cw-log-group.svg)](https://github.com/traveloka/terraform-aws-cw-log-group/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/traveloka/terraform-aws-cw-log-group.svg)](https://github.com/traveloka/terraform-aws-cw-log-group/commits/master)
+[![Issues](https://img.shields.io/github/issues/traveloka/terraform-aws-cw-log-group.svg)](https://github.com/traveloka/terraform-aws-cw-log-group/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/traveloka/terraform-aws-cw-log-group.svg)](https://github.com/traveloka/terraform-aws-cw-log-group/pulls)
+[![License](https://img.shields.io/github/license/traveloka/terraform-aws-cw-log-group.svg)](https://github.com/traveloka/terraform-aws-cw-log-group/blob/master/LICENSE)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)
-
-This repository is a guide for our terraform module (and all repository in general) to build user friendly modules that easy to understand and self explaining. We hope this can help our team nurture opensource culture and create more welcoming to contribution. This template is not strict standard and improvisation beyond this template might produce more awesome modules.
-
-**We write this module not only as an example but also as an explanation of how to implement this other modules**
 
 ## Table of Content
 
@@ -24,20 +20,7 @@ This repository is a guide for our terraform module (and all repository in gener
 
 ## Prerequisites
 
-Before jumping to use this module, you need to know standard knowledge of markdown language syntax.
-
-[Github Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
-Because specifically it explain about terraform modules, you also need to install a few tools such as
-
-- [Terraform](https://releases.hashicorp.com/terraform/). To this date, I recommend at latest version `0.11.x` and not recommend `0.12.x` or above
-- [awsudo](https://github.com/makethunder/awsudo) to assume role in AWS
-- [Visual Studio Code](https://code.visualstudio.com/download) is the best editor for the [Terraform Extension](https://marketplace.visualstudio.com/items?itemName=mauve.terraform). After install activate auto format by go to`File`→`Preferences`→`Settings`. Choose`Text Editor`→`Formatting`and check`Format on Save`
-
-Terraform Providers. You don't need to download or install anything. Just make sure this is the version you use in code if it is used
-
-- Provider [aws](https://www.terraform.io/docs/providers/aws/index.html) version `1.60.0`. We are not recommending usage of `2.0.0` and above.
-- Provider [random](https://www.terraform.io/docs/providers/random/index.html) version `1.0.0`.
+- [Terraform](https://releases.hashicorp.com/terraform/) version `0.13.x` or above
 
 ## Dependencies
 
@@ -50,38 +33,7 @@ This project need dependencies:
 
 ## Quick Start
 
-After module's code set and go, complete it with well written documentation. Start with a user friendly `README`. What is the content ? At least it explain.
-
-- What does this project do?
-- Why is this project useful?
-- How do I get started?
-- Where can I get more help, if I need it?
-
-Follow along this reading to learn more. This document already explain 2 top questions above.
-
-Standard terraform modules have an example and you can write this below in quick started section, e.g:
-
-Quick check the `variable.tf` to learn more about what you can customize, we state default value but it might not fulfill your expectation. Copy folder example, change values in `/example/locals.tf`, and After that run this scripts
-
-```
-cd /<dir>                               # Go to copied example folder
-awsudo -u  <role> -- terraform init     # Initialize by downloading modules and providers
-awsudo -u  <role> -- terraform plan     # See what resource will be created
-awsudo -u  <role> -- terraform apply    # Apply the resource in plan
-awsudo -u  <role> -- terraform destroy  # May be you change your mind ?
-```
-
-After this script run, explain what to expect, e.g:
-
-This will add
-
-- Instance Profile
-- Auto Scaling Group
-- Load Balancer Internal
-- Private Link
-- Route 53
-- Security Group
-- Security Group Rule
+Please check example
 
 ## Versioning
 
@@ -89,16 +41,47 @@ This section can inform what the latest stable version that you recommend for an
 
 We use [SemVer](https://semver.org/) for our versioning
 
-**Latest stable version** `v0.1.1`, 7th July 2019
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
 
-**Latest version** `v0.1.2`, 10th July 2019
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
 
-**Latest release** :
+## Providers
 
-- Add README documentation
-- Fix `managedBy` tags in `vpc` resources
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
-Please also see our `CHANGELOG` document in this repository and see more detail
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_cloudwatch_log_group.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_additional_tags"></a> [additional\_tags](#input\_additional\_tags) | The additional aws\_db\_instance tags that will be merged over the default tags | `map(string)` | `{}` | no |
+| <a name="input_environment"></a> [environment](#input\_environment) | The environment this log group belongs to | `string` | n/a | yes |
+| <a name="input_log_group_name"></a> [log\_group\_name](#input\_log\_group\_name) | The name of log group | `string` | n/a | yes |
+| <a name="input_product_domain"></a> [product\_domain](#input\_product\_domain) | The name of product domain this log group belongs to | `string` | n/a | yes |
+| <a name="input_retention_in_days"></a> [retention\_in\_days](#input\_retention\_in\_days) | Number of days to retain log events in the specified log group | `string` | `120` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_arn"></a> [arn](#output\_arn) | The ARN of the log group |
+| <a name="output_name"></a> [name](#output\_name) | The name of the log group |
+| <a name="output_retention_in_days"></a> [retention\_in\_days](#output\_retention\_in\_days) | Log retention of the log group |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Contributing
 

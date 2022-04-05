@@ -1,33 +1,9 @@
-## v0.2.0 (Feb 28, 2019)
+## v0.1.0 (Apr 6, 2022)
 
 NOTES:
-* Any Notes regarding your submitted PR, like breaking changes or else.
+* Initial commit
+* Default retention is set to 120 day
 
 FEATURES:
 
-* **New Source:** `aws_000_0000` ([#references_to_issue](./))
-
-ENHANCEMENTS:
-
-* feature: Add support for new version of AWS API
-
-BUG FIXES:
-
-* Prevent error from evil bugs
-
-## v0.1.0 (Jan 1, 2019)
-
-NOTES:
-* Any Notes regarding your submitted PR, like breaking changes or else.
-
-FEATURES:
-
-* **New Source:** `aws_000_0000` ([#references_to_issue](./))
-
-ENHANCEMENTS:
-
-* feature: Add support for new version of AWS API
-
-BUG FIXES:
-
-* Prevent error from evil bugs
+* Set addtional tags

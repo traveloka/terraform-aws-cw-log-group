@@ -1,10 +1,17 @@
-# This file contains terraform version constrains, provider definition, and also main resources.
-# https://www.terraform.io/docs/configuration/resources.html
+locals {
+  default_tags = {
+    Name          = var.log_group_name
+    Environment   = var.environment
+    ProductDomain = var.product_domain
+    ManagedBy     = "terraform"
+  }
 
-terraform {
-  required_version = ">= 0.11.14, < 0.12.0"
 }
 
-provider "aws" {
-  version = ">= 2.0.0, < 3.0.0"
+resource "aws_cloudwatch_log_group" "this" {
+  name = var.log_group_name
+
+  retention_in_days = var.retention_in_days
+
+  tags = merge(var.additional_tags, local.default_tags)
 }
