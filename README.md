@@ -24,12 +24,7 @@
 
 ## Dependencies
 
-This section can explain dependency that needed to run module, lets say this is `acm-certificate` module
-
-This project need dependencies:
-
-- `vpc` module applied
-- `public-route53-zone` module applied
+N/A
 
 ## Quick Start
 
@@ -83,27 +78,13 @@ No modules.
 | <a name="output_retention_in_days"></a> [retention\_in\_days](#output\_retention\_in\_days) | Log retention of the log group |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
-## Contributing
-
-Contribution can come from not only code, but also idea, discussion, etc. You can explain how to contribute to this project in `CONTRIBUTION`. Please see our example of `CONTRIBUTION` document
-
 ## Contributor
 
 For question, issue, and pull request you can contact these awesome people
 
-- [Rafi Kurnia](https://github.com/rafikurnia) (**Author**)
-- [Rukaan Adha](https://github.com/Rukaan)
-- [Muhammad Panji](https://github.com/sumodirjo)
+- [Darwin Wirawan](https://github.com/nin9swells) (**Author**)
 
 ## License
 
 Last but not least, add License to modules. Most of our repository is licensed under Apache License 2.0 - see the `LICENSE` file for details
 
-## Acknowledgments
-
-Finally, add some useful link and source and give appreciation to their share
-
-- [Readme Template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-- [Friendly Readme](https://rowanmanning.com/posts/writing-a-friendly-readme/)
-- [Opensource Guide](https://opensource.guide/starting-a-project/)
-- Inspiration from other open source
